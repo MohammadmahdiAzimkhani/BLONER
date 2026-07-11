@@ -1,0 +1,524 @@
+    /* In The Name Of Allah */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    width: 100%;
+    height: 100dvh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #244042;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b8b8b8;
+    border-radius: 10px;
+}
+
+    /* header-content */
+
+header{
+    width: 100%;
+    height: max-content;
+    display: grid;
+    position: sticky;
+    top: 0;
+    background-color: #1b90ff;
+    z-index: 50;
+    
+}
+
+.headercontenttop{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 2px solid #b8b8b8;
+    grid-template-columns: 1fr max-content 1fr;
+}
+.logo{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+}
+
+
+
+.headercontentdown{
+    width: 100%;
+    display: grid;
+    padding: 10px;
+}
+
+.headernavbar{
+    display: grid;
+}
+
+.headercontenttop button{
+    background: rgba(106, 188, 226, 0.4);
+    border: 0;
+    border: 2px solid #b8b8b8;
+    border-radius: 10px;
+    height: max-content;
+    align-self: center;
+
+}
+
+.headernavbar button{
+    padding: 10px;
+    font-size: 12px;
+    color: aliceblue;
+    box-shadow: 0 0 3px #000;
+    border: 0;
+}
+
+.header-contentleft{
+    justify-self: start;
+}
+
+.header-contentdownbtn{
+    grid-auto-flow: column;
+    gap: 10px;
+}
+
+.header-contentright{
+    justify-self: end;
+}
+
+.tabsclickheaderdown{
+    width: 100%;
+    display: grid;
+    background: rgba(106, 188, 226, 0.4);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tabsclickheaderdown i{
+    display: grid;
+    justify-self: center;
+}
+
+.tabhomeselect{
+    width: 100%;
+    display: grid;
+}
+
+.tabsclickheaderdown.active{
+    border: 0;
+    color: #244042;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 5px 3px #03ffdd;
+}
+
+    /* main-content */
+
+main{
+    background-color: #202626;
+    height: max-content;
+}
+
+
+.sections{
+    display: none;
+}
+
+.sections.active{
+    display: block;
+}
+
+.tabsclickheaderdown.active i {
+    transition: 0.9s all;
+    transform: rotatey(360deg);
+}
+
+    /* sliderbars */
+
+.barsslider-menu{
+    top: 0;
+    left: -450px;
+    background-color: #566061;
+    position: fixed;
+    width: 450px;
+    height: 100%;
+    transition: 0.7s all;
+    z-index: 1000;
+    overflow-y: scroll;
+}
+
+.barsslider-menu.active{
+    left: 0;
+}
+
+.blurslider-blur{
+    position: fixed;
+    inset: 0;
+    background: hsla(0, 0, 0.01);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.7s all;
+    z-index: 2500;
+    z-index: 100;
+
+}
+
+.blurslider-blur.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.homecontent-slider{
+    padding-top: 12px;
+}
+
+.swiperslider {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.imgswiper{
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    display: grid;
+}
+
+.swiper {
+    width: 100%;
+    height: max-content;
+    box-shadow: 0 0 5px 3px #1b90ff;
+    border-radius: 20px;
+}
+
+
+
+.slidersboxbtn{
+    padding: 10px;
+    gap: 20px;
+    display: grid;
+    background-color: #1b90ff;
+    border-radius: 10px;
+}
+
+.boxdownloadslider{
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+.boxdownloadbtn{
+    height: 220px;
+    width: 180px;
+    margin-bottom: 20px;
+    display: grid;
+    background: rgba(106, 188, 226, 0.4);
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+.homecontent-boxdownload{
+    padding: 20px;
+}
+
+.boxslidertext{
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+    width: max-content;
+    padding: 10px;
+}   
+
+.boxgamelook{
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+}
+
+.boxlogogame{
+    display: grid;
+    padding: 10px;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #1b90ff;
+    border-radius: 10px;
+}
+
+.boxgamebtn{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+}
+
+.boxgamebtn button{
+    display: grid;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 0;
+    justify-self: center;
+}
+
+.logogamebtn{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    box-shadow: 0 0 5px 3px #03ffdd;
+}
+
+.boxdownloadimg{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 60px;
+    display: grid;   
+}
+
+
+.boxdownloadbtn{
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    justify-self: center;
+}
+
+.box-gamedownload::-webkit-scrollbar{
+    width: 3px;
+}
+
+.box-gamedownload{
+    height: auto;
+    overflow-y: scroll;
+   font-size: 10px;
+
+}
+
+.box-gamedownload h1{
+    font-size: 12px;
+    width: 100%;
+    padding: 5px;
+}
+
+.btnclickdownload{
+    border: 0;
+    background-color: #0a7d00;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    height: 20px;
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.btnclickgo{
+     border: 0;
+    background-color: #393939;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    height: 20px;
+    font-size: 10px;
+    color: #fff;
+}
+
+.btnclickgo:hover i{
+    transform: scale(1.2);
+    transition: 0.9s all;
+}
+.DownloadSize-Game{
+    text-align: center;
+    background-color: #007d7d;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #ceff9d;
+}
+
+.btnclickstabdownload{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.textDescriptipn-DownloadGame{
+    border-radius: 10px;
+    font-size: 10px;
+    color: #141414;
+}
+
+.boxtextgame{
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.Descriptiontextmodelpc{
+    color: #ffffff;
+}
+
+.boxsistemAtleastPC{
+    padding: 10px;
+    background-color: #244042;
+    display: grid;
+    gap: 5px;
+    border-radius: 10px;
+    color: #82ff6f;
+}
+
+.boxsistemPC{
+    padding: 10px;
+    background-color: #244042;
+    display: grid;
+    gap: 5px;
+    border-radius: 10px;
+    color: #ffa2a2;
+}
+
+    /* footer */
+
+footer{
+    background-color: #1b90ff;
+    padding: 10px;
+}
+
+.boxfootercontent{
+    background-color: #424242;
+    border-radius: 10px;
+    height: max-content;
+}
+
+.textfooter{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+}
+
+.textfooter p{
+    font-size: 20px;
+    width: 500px;
+    justify-self: center;
+    text-align: center;
+    font-weight: 900;
+    color: #000000;
+}
+
+.boxfooter-name{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 12px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.phonenumbertext{
+    color: #5099ff;
+}
+
+.emailtext{
+    color: #a05b00;
+}
+
+.phonenumbernumber{
+    color: #aaa7ea;
+    padding-left: 5px;
+}
+
+.emailaddress{
+    color: #feae4d;
+    padding-left: 5px;
+}
+
+.bottomfooter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.gamecompany{
+    display: grid;
+    justify-content: start;
+    grid-auto-flow: column;
+    gap: 5px;
+}
+
+.gamecompany span{
+    width: 100px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    align-self: center;
+}
+
+.konamicomponi-footer{
+    background-color: #1e0000;
+    color: #ff0303;
+}
+
+.esportcomponi-footer{
+    background-color: #001b25;
+    color: #03bcff;
+}
+
+.rackstarcomponi-footer{
+    background-color: #301e00;
+    color: #8a763e;
+}
+
+.fifacomponi-footer{
+    background-color: #000742;
+    color: #0370ff;
+}
+
+.brandslink-footer{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5px;
+    justify-content: end;
+    font-size: 20px;
+}
+
+.instagrambrand-footer{
+    color: #ff0381;
+}   
+
+.telegrambrand-footer{
+    color: #036cff;
+}
+
+.youtubebrand-footer{
+    color: #c10000;
+}
+
+.githubbrand-footer{
+    color: #000;
+}
+
+
+/* home-all */
+
+.allcontent{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    padding: 10px;
+    padding-top: 30px;
+}
+
+
+/* cardgamein-the-site */
+
+.divcard{
+    display: grid;
+    width: 100%;
+    height: max-content;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}

@@ -1,0 +1,137 @@
+@media only screen and (max-width:680px) {
+    .imgswiper {
+        height: 200px;
+    }
+
+    .swiperslider {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .barsslider-menu {
+        width: 250px;
+    }
+
+    .homecontent-boxdownload {
+        padding: 10px;
+    }
+
+    .boxslidertext {
+        font-size: 10px;
+    }
+
+    .boxdownloadslider {
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+.allcontent{
+        grid-template-columns: repeat(3, 1fr) !important;
+
+}
+
+    .slidersboxbtn {
+        gap: 10px;
+        padding: 10px;
+
+    }
+
+    .boxgamelook {
+        padding: 10px;
+    }
+
+    .boxgamebtn {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+    }
+
+    .boxgamebtn button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .boxlogogame {
+        gap: 0;
+    }
+
+    .boxdownloadbtn {
+        height: 180px !important;
+        width: 110px !important;
+    }
+
+    .homecontent-slider {
+        padding-top: 8px;
+    }
+.headergamefooter{
+    scrollbar-width: none;
+}
+
+.footercontent{
+    grid-template-columns: auto;
+    grid-template-rows: 1fr max-content;
+}
+
+.sectioncompany{
+    font-size: 12px;
+    height: 150px;
+}
+.textfooter p{
+    font-size: 13px;
+    width: 300px;
+}
+.gamecompany span{
+    font-size: 8px;
+    width: 60px;
+}
+.brandslink-footer{
+    font-size: 16px;
+}
+}
+
+@media only screen and (max-width:980px) {
+    .boxdownloadslider {
+        gap: 5px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .allcontent{
+        grid-template-columns: repeat(4, 1fr);
+
+}
+
+    .boxdownloadbtn {
+        height: 180px;
+        width: 180px;
+    }
+}
+
+@media only screen and (max-width:1500px) {
+    .boxgamebtn {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+    }
+
+    .boxdownloadbtn {
+        height: 190px;
+        width: 140px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .boxgamebtn {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .boxdownloadslider {
+        gap: 5px;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .allcontent{
+        grid-template-columns: repeat(3, 1fr) !important;
+
+}
+}
