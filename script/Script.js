@@ -199,7 +199,7 @@ const cardgame = BLONER.create({
         display: "grid",
         width: "110px",
         height: "180px",
-        justifySelf:"center",
+        justifySelf: "center",
     },
     addtagthis: {
         tag: "div",
@@ -216,9 +216,9 @@ const cardgame = BLONER.create({
                 {
 
                     tag: "img",
-                    id:"imgbox",
+                    id: "imgbox",
                     attributes: {
-                        src:"k"
+                        src: "k"
                     },
                     css: {
                         width: "100%",
@@ -244,10 +244,10 @@ const cardgame = BLONER.create({
                 addtagthis: [{
                     tag: "div",
                     text: ``,
-                    css:{
-                        width:"100%",
-                        height:"105px",
-                        overflowY:"scroll",
+                    css: {
+                        width: "100%",
+                        height: "105px",
+                        overflowY: "scroll",
                     },
                 },
                 {
@@ -260,27 +260,27 @@ const cardgame = BLONER.create({
                         tag: "button",
                         class: 'fas fa-arrow-up-right-from-square',
                         css: {
-                            background:"#363636bb",
-                            color:"#cccccc",
+                            background: "#363636bb",
+                            color: "#cccccc",
                             width: "100%",
                             borderBottomLeftRadius: "10px",
-                            border:"0",
-                            padding:"2px",
-                            fontSize:"10px",
-                            borderRight:"2px solid #000000"
+                            border: "0",
+                            padding: "2px",
+                            fontSize: "10px",
+                            borderRight: "2px solid #000000"
                         }
                     },
                     {
                         tag: "button",
                         class: 'fas fa-download',
                         css: {
-                            background:"#0f7e00bb",
-                            color:"#cccccc",
+                            background: "#0f7e00bb",
+                            color: "#cccccc",
                             width: "100%",
                             borderBottomRightRadius: "10px",
-                            border:"0",
-                            padding:"2px",
-                            fontSize:"10px"
+                            border: "0",
+                            padding: "2px",
+                            fontSize: "10px"
                         }
                     }
                     ],
@@ -295,12 +295,152 @@ const cardgame = BLONER.create({
 
 
 
-const gamebox=document.getElementById("divcardid")
+// const gamebox=document.getElementById("divcardid")
 
 
-gamebox.innerHTML+=cardgame.outerHTML;
-gamebox.innerHTML+=cardgame.outerHTML;
-gamebox.innerHTML+=cardgame.outerHTML;
+// gamebox.innerHTML+=cardgame.outerHTML;
+// gamebox.innerHTML+=cardgame.outerHTML;
+// gamebox.innerHTML+=cardgame.outerHTML;
 
 
-document.getElementById("imgbox").attributes.src.value = "./static/img/Cover-Gta.jpg"
+// document.getElementById("imgbox").attributes.src.value = "./static/img/Cover-Gta.jpg"
+
+
+
+
+function createGameCard(data) {
+
+    return BLONER.create(
+        {
+            tag: "div",
+            css: {
+                display: "grid",
+                width: "110px",
+                height: "180px",
+                justifySelf: "center",
+            },
+            addtagthis: {
+                tag: "div",
+                css: {
+                    display: "grid",
+                    gridTemplateRows: "max-content 1fr",
+                    boxShadow: "0 0 10px #000",
+                    borderRadius: "10px",
+                },
+                addtagthis: [
+                    {
+                        tag: "div",
+                        addtagthis:
+                        {
+
+                            tag: "img",
+                            id: "imgbox",
+                            attributes: {
+                                src: data.image
+                            },
+                            css: {
+                                width: "100%",
+                                display: "grid",
+                                borderTopLeftRadius: "10px",
+                                borderTopRightRadius: "10px",
+                            },
+                        }
+                    },
+
+                    {
+                        tag: "div",
+                        css: {
+                            display: "grid",
+                            background: "#1b90ff",
+                            color: "#fff",
+                            fontSize: "10px",
+                            borderBottomLeftRadius: "10px",
+                            borderBottomRightRadius: "10px",
+                            display: "grid",
+                            gridTemplateRows: "1fr max-content",
+                        },
+                        addtagthis: [{
+                            tag: "div",
+                            text: data.title,
+                            css: {
+                                width: "100%",
+                                height: "105px",
+                                overflowY: "scroll",
+                                fontSize:"10px",
+                                textAlign:"center",
+                            },
+                        },
+                        {
+                            tag: "div",
+                            css: {
+                                display: "grid",
+                                gridTemplateColumns: "1fr 1fr",
+                            },
+                            addtagthis: [{
+                                tag: "button",
+                                class: 'fas fa-arrow-up-right-from-square',
+                                css: {
+                                    background: "#363636bb",
+                                    color: "#cccccc",
+                                    width: "100%",
+                                    borderBottomLeftRadius: "10px",
+                                    border: "0",
+                                    padding: "5px",
+                                    fontSize: "10px",
+                                }
+                            },
+                            {
+                                tag: "button",
+                                class: 'fas fa-download',
+                                css: {
+                                    background: "#0f7e00bb",
+                                    color: "#cccccc",
+                                    width: "100%",
+                                    borderBottomRightRadius: "10px",
+                                    border: "0",
+                                    padding: "5px",
+                                    fontSize: "10px"
+                                }
+                            }
+                            ],
+
+                        }
+                        ],
+                    }
+                ]
+            },
+        }
+    )
+}
+
+
+const games = [
+
+    {
+        title: "Fc mobile",
+        image: "./static/img/Cover-Fc.jpg",
+    },
+
+
+    {
+        title: "efootball",
+        image: "./static/img/Cover-Pes.jpg",
+    },
+
+
+    {
+        title: "Needfor-Speed",
+        image: "static/img/Cover-NeedFor-Speed.jpg",
+    }
+
+];
+
+
+const gamebox = document.getElementById("divcardid");
+
+
+games.forEach(game => {
+    gamebox.appendChild(
+        createGameCard(game)
+    );
+});

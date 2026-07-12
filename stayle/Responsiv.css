@@ -1,10 +1,6 @@
 @media only screen and (max-width:680px) {
     .imgswiper {
-        height: 200px;
-    }
-
-    .swiperslider {
-        padding: 10px;
+        height: 200px !important;
     }
 
     .logo {
@@ -17,7 +13,6 @@
     }
 
     .homecontent-boxdownload {
-        padding: 10px;
     }
 
     .boxslidertext {
@@ -29,10 +24,10 @@
         grid-template-columns: repeat(3, 1fr) !important;
     }
 
-.allcontent{
+    .allcontent {
         grid-template-columns: repeat(3, 1fr) !important;
 
-}
+    }
 
     .slidersboxbtn {
         gap: 10px;
@@ -41,7 +36,6 @@
     }
 
     .boxgamelook {
-        padding: 10px;
     }
 
     .boxgamebtn {
@@ -64,43 +58,56 @@
     }
 
     .homecontent-slider {
-        padding-top: 8px;
     }
-.headergamefooter{
-    scrollbar-width: none;
-}
 
-.footercontent{
-    grid-template-columns: auto;
-    grid-template-rows: 1fr max-content;
-}
+    .headergamefooter {
+        scrollbar-width: none;
+    }
 
-.sectioncompany{
-    font-size: 12px;
-    height: 150px;
-}
-.textfooter p{
-    font-size: 13px;
-    width: 300px;
-}
-.gamecompany span{
-    font-size: 8px;
-    width: 60px;
-}
-.brandslink-footer{
-    font-size: 16px;
-}
+    .footercontent {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr max-content;
+    }
+
+    .sectioncompany {
+        font-size: 12px;
+        height: 150px;
+    }
+
+    .textfooter p {
+        font-size: 13px;
+        width: 300px;
+    }
+
+    .gamecompany span {
+        font-size: 6px;
+        width: 50px;
+    }
+
+    .brandslink-footer {
+        font-size: 16px;
+    }
+
+    .home-section {
+        display: grid;
+        gap: 1rem;
+        padding: 15px 10px;
+    }
 }
 
 @media only screen and (max-width:980px) {
+      .imgswiper {
+        height: 300px;
+    }
     .boxdownloadslider {
         gap: 5px;
         grid-template-columns: repeat(4, 1fr);
     }
-    .allcontent{
+
+    .allcontent {
         grid-template-columns: repeat(4, 1fr);
 
-}
+    }
 
     .boxdownloadbtn {
         height: 180px;
@@ -130,8 +137,9 @@
         gap: 5px;
         grid-template-columns: repeat(2, 1fr) !important;
     }
-    .allcontent{
+
+    .allcontent {
         grid-template-columns: repeat(3, 1fr) !important;
 
-}
+    }
 }
