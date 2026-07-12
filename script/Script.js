@@ -1,8 +1,9 @@
+// in the name off ALLAH 
 
-
+// select-page
 function selectpage(id, btn) {
     const sectionsall = document.querySelectorAll('.sections');
-    const tabbtnheader = document.querySelectorAll('.tabsclickheaderdown');
+    const tabbtnheader = document.querySelectorAll('.tabsclickheader');
 
     sectionsall.forEach(sections => {
         sections.classList.remove('active')
@@ -14,8 +15,7 @@ function selectpage(id, btn) {
     btn.classList.add('active')
 }
 
-
-
+// select-bars-blur
 const clickonslider = document.getElementById('clickonslider')
 
 const barsslider = document.getElementById('barsslider');
@@ -35,8 +35,6 @@ blurslider.addEventListener('click', () => {
     document.body.style.overflow = "auto"
 })
 
-
-
 // swiper
 
 const swiper = new Swiper('.swiper', {
@@ -48,399 +46,172 @@ const swiper = new Swiper('.swiper', {
     },
 
     autoplay: {
-        delay: 3000,   // 👈 هر 3 ثانیه
-        disableOnInteraction: false, // وقتی کاربر کلیک کرد قطع نشه
+        delay: 3000, 
+        disableOnInteraction: false, 
     },
 });
 
+// card-gamedownloadSite
+function createGameCard(game) {
+    const card = document.createElement('div');
+    card.className = 'boxdownloadbtn';
+    
+    card.innerHTML = `
+        <div class="box-imgdownload">
+            <img class="boxdownloadimg" src="${game.image}" alt="${game.title}">
+        </div>
+        <div class="box-gamedownload">
+            <h1>${game.title}</h1>
+            <div class="boxtextgame">
+                <span class="texttop">1.Description:</span>
+                <div class="textDescriptipn-DownloadGame">
+                    ${game.description}
+                </div>
+                
+                <span class="texttop">2.PC:</span>
+                <div class="boxsistemAtleastPC">
+                    <div>CPU: <span class="Descriptiontextmodelpc">${game.cpu ||  'CORE i5'}</span></div>
+                    <div>GPU: <span class="Descriptiontextmodelpc">${game.gpu || 'RX580'}</span></div>
+                    <div>RAM: <span class="Descriptiontextmodelpc">${game.ram || '12G'}</span></div>
+                    <div>SSD: <span class="Descriptiontextmodelpc">${game.ssd || '200G'}</span></div>
+                </div>
 
-function selectcompany(id, btn) {
-    const sectioncompanys = document.querySelectorAll('.sectioncompany')
-    sectioncompanys.forEach(sectioncompany => sectioncompany.classList.remove('active'))
-    document.getElementById(id).classList.add('active');
-    const tabcompanys = document.querySelectorAll('.tabcompany');
-    tabcompanys.forEach(tabcompany => tabcompany.classList.remove('active'))
-    btn.classList.add('active')
+                <span class="texttop">4.Size:</span>
+                <span class="DownloadSize-Game">${game.size}</span>
+            </div>
+        </div>
+        <div class="btnclickstabdownload">
+            <button class="btnclickgo" data-action="detail" data-id="${game.id}">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+            <button class="btnclickdownload" data-action="download" data-id="${game.id}">
+                <i class="fas fa-download"></i>
+            </button>
+        </div>
+    `;
+
+    // اضافه کردن Event Listener به دکمه‌ها
+    // card.querySelectorAll('button').forEach(btn => {
+    //     btn.addEventListener('click', function() {
+    //         const action = this.dataset.action;
+    //         const id = this.dataset.id;
+            
+    //         if (action === 'detail') {
+    //             showGameDetail(id);
+    //         } else if (action === 'download') {
+    //             handleDownload(id);
+    //         }
+    //     });
+    // });
+
+    return card;
 }
-
-
-
-
-const BLONER = {
-    create(options) {
-        const el = document.createElement(options.tag);
-
-        if (options.text) {
-            el.textContent = options.text
-        };
-
-        if (options.css) {
-            Object.assign(el.style, options.css)
-        }
-
-        if (options.hover) {
-
-            const oldstyle = {};
-
-            for (const key in options.hover) {
-                oldstyle[key] = el.style[key];
-            };
-
-            el.addEventListener("mouseenter", () => {
-                Object.assign(el.style, options.hover)
-            })
-
-            el.addEventListener("mouseleave", () => {
-                Object.assign(el.style, oldstyle)
-            })
-        }
-
-        if (options.attributes) {
-
-            for (const key in options.attributes) {
-
-                if (key === "style") {
-                    Object.assign(el.style, options.attributes.style);
-                } else {
-                    el.setAttribute(key, options.attributes[key]);
-                }
-
-            }
-
-        }
-
-        if (options.class) {
-            el.className = options.class;
-        }
-
-        if (options.id) {
-            el.id = options.id
-        }
-
-        if (options.event) {
-            for (const key in options.event) {
-                el.addEventListener(key, options.event[key])
-            }
-        }
-
-        const addChild = (item) => {
-
-            const child = document.createElement(item.tag);
-
-            if (item.text) child.textContent = item.text;
-            if (item.class) child.className = item.class;
-            if (item.id) child.id = item.id;
-            if (item.css) Object.assign(child.style, item.css);
-            if (item.attributes) {
-
-                for (const key in item.attributes) {
-
-                    if (key === "style") {
-                        Object.assign(child.style, item.attributes.style);
-                    } else {
-                        child.setAttribute(key, item.attributes[key]);
-                    }
-
-                }
-
-            }
-            if (item.addtagthis) {
-
-                if (Array.isArray(item.addtagthis)) {
-                    item.addtagthis.forEach(x => {
-                        child.appendChild(addChild(x));
-                    });
-                } else {
-                    child.appendChild(addChild(item.addtagthis));
-                }
-
-            }
-
-            return child;
-        };
-
-        if (options.addtagthis) {
-
-            if (Array.isArray(options.addtagthis)) {
-                options.addtagthis.forEach(item => {
-                    el.appendChild(addChild(item));
-                });
-            } else {
-                el.appendChild(addChild(options.addtagthis));
-            }
-
-        }
-        if (options.bind) {
-
-            BLONER1.watch(() => {
-
-                for (const key in options.bind) {
-                    const value = options.bind[key];
-                    el[key] = typeof value === "function" ? value() : value;
-                }
-
-            });
-
-        }
-
-        const parent = document.querySelector(options.parent);
-        if (parent) {
-            parent.appendChild(el)
-        };
-        return el;
-    }
-}
-
-
-
-const cardgame = BLONER.create({
-    tag: "div",
-    css: {
-        display: "grid",
-        width: "110px",
-        height: "180px",
-        justifySelf: "center",
-    },
-    addtagthis: {
-        tag: "div",
-        css: {
-            display: "grid",
-            gridTemplateRows: "max-content 1fr",
-            boxShadow: "0 0 10px #000",
-            borderRadius: "10px",
-        },
-        addtagthis: [
-            {
-                tag: "div",
-                addtagthis:
-                {
-
-                    tag: "img",
-                    id: "imgbox",
-                    attributes: {
-                        src: "k"
-                    },
-                    css: {
-                        width: "100%",
-                        display: "grid",
-                        borderTopLeftRadius: "10px",
-                        borderTopRightRadius: "10px",
-                    },
-                }
-            },
-
-            {
-                tag: "div",
-                css: {
-                    display: "grid",
-                    background: "#1b90ff",
-                    color: "#fff",
-                    fontSize: "10px",
-                    borderBottomLeftRadius: "10px",
-                    borderBottomRightRadius: "10px",
-                    display: "grid",
-                    gridTemplateRows: "1fr max-content",
-                },
-                addtagthis: [{
-                    tag: "div",
-                    text: ``,
-                    css: {
-                        width: "100%",
-                        height: "105px",
-                        overflowY: "scroll",
-                    },
-                },
-                {
-                    tag: "div",
-                    css: {
-                        display: "grid",
-                        gridTemplateColumns: "1fr 1fr",
-                    },
-                    addtagthis: [{
-                        tag: "button",
-                        class: 'fas fa-arrow-up-right-from-square',
-                        css: {
-                            background: "#363636bb",
-                            color: "#cccccc",
-                            width: "100%",
-                            borderBottomLeftRadius: "10px",
-                            border: "0",
-                            padding: "2px",
-                            fontSize: "10px",
-                            borderRight: "2px solid #000000"
-                        }
-                    },
-                    {
-                        tag: "button",
-                        class: 'fas fa-download',
-                        css: {
-                            background: "#0f7e00bb",
-                            color: "#cccccc",
-                            width: "100%",
-                            borderBottomRightRadius: "10px",
-                            border: "0",
-                            padding: "2px",
-                            fontSize: "10px"
-                        }
-                    }
-                    ],
-
-                }
-                ],
-            }
-        ]
-    },
-})
-
-
-
-
-// const gamebox=document.getElementById("divcardid")
-
-
-// gamebox.innerHTML+=cardgame.outerHTML;
-// gamebox.innerHTML+=cardgame.outerHTML;
-// gamebox.innerHTML+=cardgame.outerHTML;
-
-
-// document.getElementById("imgbox").attributes.src.value = "./static/img/Cover-Gta.jpg"
-
-
-
-
-function createGameCard(data) {
-
-    return BLONER.create(
-        {
-            tag: "div",
-            css: {
-                display: "grid",
-                width: "110px",
-                height: "180px",
-                justifySelf: "center",
-            },
-            addtagthis: {
-                tag: "div",
-                css: {
-                    display: "grid",
-                    gridTemplateRows: "max-content 1fr",
-                    boxShadow: "0 0 10px #000",
-                    borderRadius: "10px",
-                },
-                addtagthis: [
-                    {
-                        tag: "div",
-                        addtagthis:
-                        {
-
-                            tag: "img",
-                            id: "imgbox",
-                            attributes: {
-                                src: data.image
-                            },
-                            css: {
-                                width: "100%",
-                                display: "grid",
-                                borderTopLeftRadius: "10px",
-                                borderTopRightRadius: "10px",
-                            },
-                        }
-                    },
-
-                    {
-                        tag: "div",
-                        css: {
-                            display: "grid",
-                            background: "#1b90ff",
-                            color: "#fff",
-                            fontSize: "10px",
-                            borderBottomLeftRadius: "10px",
-                            borderBottomRightRadius: "10px",
-                            display: "grid",
-                            gridTemplateRows: "1fr max-content",
-                        },
-                        addtagthis: [{
-                            tag: "div",
-                            text: data.title,
-                            css: {
-                                width: "100%",
-                                height: "105px",
-                                overflowY: "scroll",
-                                fontSize:"10px",
-                                textAlign:"center",
-                            },
-                        },
-                        {
-                            tag: "div",
-                            css: {
-                                display: "grid",
-                                gridTemplateColumns: "1fr 1fr",
-                            },
-                            addtagthis: [{
-                                tag: "button",
-                                class: 'fas fa-arrow-up-right-from-square',
-                                css: {
-                                    background: "#363636bb",
-                                    color: "#cccccc",
-                                    width: "100%",
-                                    borderBottomLeftRadius: "10px",
-                                    border: "0",
-                                    padding: "5px",
-                                    fontSize: "10px",
-                                }
-                            },
-                            {
-                                tag: "button",
-                                class: 'fas fa-download',
-                                css: {
-                                    background: "#0f7e00bb",
-                                    color: "#cccccc",
-                                    width: "100%",
-                                    borderBottomRightRadius: "10px",
-                                    border: "0",
-                                    padding: "5px",
-                                    fontSize: "10px"
-                                }
-                            }
-                            ],
-
-                        }
-                        ],
-                    }
-                ]
-            },
-        }
-    )
-}
-
 
 const games = [
-
     {
-        title: "Fc mobile",
+        id: 1,
+        title: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
+        description: "fc game in the Lorem ipsum dolorulla inventore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
     },
-
-
     {
-        title: "efootball",
+        id: 2,
+        title: "PES 2026",
         image: "./static/img/Cover-Pes.jpg",
+        description: "pes game in the Lorem ipsum dolorulla inventore recusandae illo totam, quae magni. Veniam.",
+        size: "180 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "150G"
     },
-
-
     {
-        title: "Needfor-Speed",
-        image: "static/img/Cover-NeedFor-Speed.jpg",
-    }
-
+        id: 3,
+        title: "Need For",
+        image: "./static/img/Cover-NeedFor-Speed.jpg",
+        description: "need forgame in the Lorem ipsum dolorulla inventore recusandae illo totam, quae magni. Veniam.",
+        size: "120 G",
+        cpu: "CORE i7",
+        gpu: "RTX 2060",
+        ram: "16G",
+        ssd: "100G"
+    },
+     {
+        id: 4,
+        title: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+    {
+        id: 5,
+        title: "PES 2026",
+        image: "./static/img/Cover-Pes.jpg",
+        description: "game in the Lorem ipsum dolorulla inventore recusandae illo totam, quae magni. Veniam.",
+        size: "180 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "150G"
+    },
+    {
+        id: 3,
+        title: "Need Fort",
+        image: "./static/img/Cover-NeedFor-Speed.jpg",
+        description: "game in the Lorem ipsum dolorulla inventore recusandae illo totam, quae magni. Veniam.",
+        size: "120 G",
+        cpu: "CORE i7",
+        gpu: "RTX 2060",
+        ram: "16G",
+        ssd: "100G"
+    },
+     {
+        id: 1,
+        title: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla inventore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+    {
+        id: 2,
+        title: "PES 2026",
+        image: "./static/img/Cover-Pes.jpg",
+        description: "game in the Lorem ipsum dolorulla inventore recusandae illo totam, quae magni. Veniam.",
+        size: "180 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "150G"
+    },
+    {
+        id: 3,
+        title: "Need for",
+        image: "./static/img/Cover-NeedFor-Speed.jpg",     
+        description: "game in the Lorem ipsum dolorulla inventore recusandae illo totam, quae magni. Veniam.",
+        size: "120 G",
+        cpu: "COREi7",
+        gpu: "RX580",
+        ram: "16G",
+        ssd: "100G"
+    },
+    // بازی‌های بیشتر اضافه کن...
 ];
 
-
-const gamebox = document.getElementById("divcardid");
-
-
+const gamebox = document.getElementById("cardgamebox");
+// ساخت همه کارت‌ها
 games.forEach(game => {
-    gamebox.appendChild(
-        createGameCard(game)
-    );
+    gamebox.appendChild(createGameCard(game));
 });
