@@ -210,8 +210,20 @@ const games = [
     // بازی‌های بیشتر اضافه کن...
 ];
 
+// home-cardgame
+
 const gamebox = document.getElementById("cardgamebox");
 // ساخت همه کارت‌ها
 games.forEach(game => {
     gamebox.appendChild(createGameCard(game));
+});
+
+
+
+// all-cardgame
+
+const gameboxall = document.getElementById("allcardgame");
+// ساخت همه کارت‌ها
+games.forEach(game => {
+    gameboxall.appendChild(createGameCard(game));
 });

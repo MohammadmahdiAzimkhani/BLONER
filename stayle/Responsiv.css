@@ -22,11 +22,6 @@
         grid-template-columns: repeat(3, 1fr) !important;
     }
 
-    .allcontent {
-        grid-template-columns: repeat(3, 1fr) !important;
-
-    }
-
     .slidersboxbtn {
         gap: 10px;
         padding: 10px;
@@ -98,10 +93,6 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .allcontent {
-        grid-template-columns: repeat(4, 1fr);
-
-    }
 
     .boxdownloadbtn {
         height: 180px;
@@ -132,8 +123,5 @@
         grid-template-columns: repeat(2, 1fr) !important;
     }
 
-    .allcontent {
-        grid-template-columns: repeat(3, 1fr) !important;
-
-    }
+    
 }
