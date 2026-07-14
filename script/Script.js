@@ -115,6 +115,29 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
+      {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+      {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+    
 
     // بازی‌های بیشتر اضافه کن...
 ];
@@ -136,3 +159,20 @@ const gameboxall = document.getElementById("allcardgame");
 games.forEach(game => {
     gameboxall.appendChild(createGameCard(game));
 });
+
+
+// new
+
+const gameboxnew = document.getElementById("cardgameboxnew");
+
+games.forEach(game => {
+    gameboxnew.appendChild(createGameCard(game));
+});
+
+// update 
+
+const gameboxupdate=document.getElementById("cardgameboxupdate");
+
+games.forEach(game=>{
+    gameboxupdate.appendChild(createGameCard(game))
+})
