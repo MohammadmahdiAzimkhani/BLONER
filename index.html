@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,17 +20,16 @@
                 </div>
                 <img class="logo" src="./static/img/ChatGPT Image Jun 2, 2026, 11_09_51 AM.jpg" alt="">
                 <div class="headernavbar header-contentright">
-                    <button onclick="selectpage('login',this)" class="tabsclickheader"><i class="fas fa-user"></i></button>
+                    <button onclick="selectpage('search',this)"><i class="fas fa-search"></i></button>
                 </div>
             </nav>
-            <!-- header-down -->
+            <!-- header-down -->    
             <nav class="headercontentdown">
-                <div class="headernavbar header-contentdownbtn">
-                    <button onclick="selectpage('home',this)" class="tabsclickheader tabhomeselect active" id="tabhomeid"><i class="fas fa-home"></i></button>
-                    <button onclick="selectpage('all',this)" class="tabsclickheader taballselect" id="taballid"><i class="fas fa-fas fa-th-large"></i></button>
-                    <button onclick="selectpage('download',this)" class="tabsclickheader tabdownloadselect" id="tabdownloadid"><i class="fas fa-download"></i></button>
-                    <button class="tabsclickheader tabsearchselect" id="tabsearchid"><i class="fas fa-search"></i></button>
-                    <button onclick="selectpage('save',this)" class="tabsclickheader tabsaveselect" id="tabsaveid"><i class="fas fa-bookmark"></i></button>
+                <div class="header-contentdownbtn">
+                    <button onclick="selectpage('home',this)" class="tabsclickheader active"><i class="fas fa-home"></i><span>خانه</span></button>
+                    <button onclick="selectpage('all',this)" class="tabsclickheader"><i class="fas fa-bars"></i><span>دسته بندی ها</span></button>
+                    <button onclick="selectpage('download',this)" class="tabsclickheader"><i class="fas fa-download"></i><span>دانلود ها</span></button>
+                    <button onclick="selectpage('login',this)" class="tabsclickheader"><i class="fas fa-user"></i><span>ورود</span></button>
                 </div>
             </nav>
         </header>
@@ -65,23 +64,28 @@
                         </div>
                         <div class="boxgamelook">
                             <div class="boxlogogame">
-                                <span class="boxslidertext">Box Game :</span>
+                                <span class="boxslidertext">: دسته ها</span>
                                 <div class="boxgamebtn">
                                     <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
                                     <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt="fifalogo"></button>
                                     <button><img class="logogamebtn" src="./static/img/Logo game-EuroTrack.jpg" alt="eurotracklogo"></button>
                                     <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
                                     <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt=""></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-EuroTrack.jpg" alt=""></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt=""></button>
+                                    <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt="fifalogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Logo game-EuroTrack.jpg" alt="eurotracklogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
                                     <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt=""></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-EuroTrack.jpg" alt=""></button>
+                                    <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt="fifalogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Logo game-EuroTrack.jpg" alt="eurotracklogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
                                     <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt=""></button>
                                 </div>
                             </div>
                         </div>
                         <div class="boxdownloadnewgame">
-                                <span class="boxslidertext">Box Download :</span>
+                                <span class="boxslidertext">: پر طرفدار ترین</span>
                             <div class="card-downloadnewgame" id="cardgamebox">
                             
                             </div>
@@ -116,7 +120,12 @@
                 </section>
                 <!-- main-login -->
                 <section class="sections" id="login">
-                    login
+                    <div class="logincontent">
+                        <form action="">
+                            <label for=""></label>
+                            <input type="text">
+                        </form>
+                    </div>
                 </section>
             </div>
         </main>

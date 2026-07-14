@@ -3,6 +3,11 @@
         height: 200px !important;
     }
 
+    .header-contentdownbtn button{
+        width: 80px;
+        font-size: 8px;
+    }
+
     .logo {
         width: 40px;
         height: 40px;
@@ -19,7 +24,7 @@
 
     .card-downloadnewgame{
         gap: 5px;
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(4, 1fr) !important;
     }
 
     .slidersboxbtn {
@@ -28,14 +33,17 @@
 
     }
 
-    .boxgamebtn {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
+    .boxgamebtn{
+        gap: 10px !important;
     }
 
     .boxgamebtn button {
-        width: 55px;
-        height: 55px;
+        width: 70px;
+        height: 70px;
+        scrollbar-width: none;
+    }
+    .boxgamebtn:hover{
+        scrollbar-width: none;
     }
 
     .boxlogogame {
@@ -43,11 +51,13 @@
     }
 
     .boxdownloadbtn {
-        height: 180px !important;
+        height: 140px !important;
         width: 110px !important;
     }
 
-
+    .boxdownloadimg{
+        height: 100%;
+    }
 
     .headergamefooter {
         scrollbar-width: none;
@@ -79,9 +89,11 @@
 
     .homecontent{
         display: grid;
-        gap: 1rem;
+        padding-top: 0 !important;
         padding: 10px;
+        gap: 1rem;
     }
+   
 }
 
 @media only screen and (max-width:980px) {
