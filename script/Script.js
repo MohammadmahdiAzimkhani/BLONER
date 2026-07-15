@@ -59,9 +59,15 @@ function createGameCard(game) {
     card.innerHTML = `
         <div class="box-imgdownload">
             <img class="boxdownloadimg" src="${game.image}" alt="${game.title}">
-            <span class="boxdownloadimggame">
-                ${game.gamename}
-            </span>
+            <div class="boxdownloadimggame">
+                <div class="boxdownloadsize-gamename">
+                    <span>${game.gamename}</span>
+                    <span class="sizedownload">10G</span>
+                </div>
+                <div class="boxdownloadicondl">
+                     <span><i class="fas fa-download"></i></span>   
+                </div>
+            </div>
         </div>
     `;
 
