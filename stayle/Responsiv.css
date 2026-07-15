@@ -38,8 +38,8 @@
     }
 
     .boxgamebtn button {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         scrollbar-width: none;
     }
     .boxgamebtn:hover{

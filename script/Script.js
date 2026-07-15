@@ -143,7 +143,138 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-    
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
+     {
+        id: 4,
+        gamename: "FC 26",
+        image: "./static/img/Cover-Fc.jpg",
+        description: "game in the Lorem ipsum dolorulla invenojojjtore recusandae illo totam, quae magni. Veniam.",
+        size: "200 G",
+        cpu: "CORE i5",
+        gpu: "RX580",
+        ram: "12G",
+        ssd: "200G"
+    },
 
     // بازی‌های بیشتر اضافه کن...
 ];
