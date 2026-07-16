@@ -159,7 +159,7 @@
 
     /* main */
 
-    .maincontent{
+    .maincontent {
         background-color: #202626;
         height: max-content;
         display: grid;
@@ -336,6 +336,8 @@
         justify-content: center;
         border-radius: 10px;
         justify-self: center;
+        border: 2px solid #5a5a5a;
+
     }
 
     .boxgame-all {
@@ -358,24 +360,38 @@
     #login {
         width: 100%;
         height: 100%;
+        background-image: url(../static/img/9ebc7ac9-8d9c-445a-9643-95fd29065819.jfif); 
+        background-size: cover;  
     }
 
     .logincontent {
         display: grid;
         width: 100%;
         height: 80vh;
+        background: linear-gradient(120deg,#0084ff99 50%,#2c2c2c9d 50%);
     }
 
     .logincontent form {
-        background-color: #1b90ff;
+        background-color: #001a33e9;
+        border: 2px solid #5a5a5a;
         justify-self: center;
         align-self: center;
         display: grid;
         grid-auto-flow: row;
         padding: 10px;
-        width: 260px;
-        height: 400px;
+        width: 240px;
+        height: 380px;
         border-radius: 10px;
+    }
+
+    .inputform:focus{
+        transform: scale(1.05);
+        background-color: #003566e9;
+    }
+
+    .inputform:focus::placeholder{
+        color: #03ffcd;
+        font-size: 15px;
     }
 
     .inputform {
@@ -384,8 +400,9 @@
         padding: 8px;
         border: 0;
         border-radius: 10px;
-        background-color: #1b90ff;
-        border-bottom: 2px solid #000;
+        background-color: #001a33e9;
+        border: 2px solid #5a5a5a;
+        color: #ffffff;
     }
 
     .inputform::placeholder {
@@ -402,9 +419,10 @@
         padding: 10px;
         border-radius: 10px;
         border: 0;
-        background-color: #000;
-        color: #fff;
+        background-color: #036cff;
+        color: #000000;
         cursor: pointer;
+        font-size: 14px;
     }
 
     .brandtext-logn {
@@ -427,6 +445,7 @@
 
     .boxcheckbox {
         justify-self: end;
+        color: #036cff;
     }
 
     .boxcreateacant-nopassword {
@@ -441,7 +460,7 @@
         border: 0;
         font-size: 15px;
         font-weight: 100;
-        color: #000000;
+        color: #a4a4a4;
     }
 
     /* footer */
