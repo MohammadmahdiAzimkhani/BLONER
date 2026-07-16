@@ -35,51 +35,6 @@
         top: 0;
         z-index: 50;
         padding: 10px;
-        
-    }
-
-    .headernavbar {
-        display: grid;
-    }
-
-    .headernavbar button {
-        padding: 10px;
-        font-size: 12px;
-        color: aliceblue;
-        box-shadow: 0 0 3px #000;
-        border: 0;
-    }
-
-    .tabsclickheader {
-        display: grid;
-        grid-auto-flow: column;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        
-    }
-
-    /* 
-
-    .tabsclickheader span{
-        display: grid;
-        justify-self: center;
-        width: 100%;
-    }
-
-    .tabsclickheader.active {
-        border: 0;
-        color: #244042;
-        background: rgba(255, 255, 255, 0.4);
-        box-shadow: 0 0 5px 3px #03ffdd;
-    }*/
-
-  
-       .tabsclickheader.active {
-        border: 0;
-        color: #fff !important;
-        background: rgba(0, 170, 179, 0.562);
-        box-shadow: 0 0 3px 1px #03ffdd;
     }
 
     /* header-top */
@@ -90,43 +45,40 @@
         justify-content: center;
         padding: 10px;
         grid-template-columns: 1fr max-content 1fr;
-        background: rgba(37, 111, 141, 0.25);
-        backdrop-filter: blur(18px);
+        background: #001a33e9;
         border-radius: 10px;
         border: 2px solid #5a5a5a;
-        
     }
 
-    .logo {
-        width: 45px;
-        height: 45px;
-        border-radius: 10px;
-    }
-
-    .headercontenttop button{
-        background: rgba(0, 106, 255, 0.232);
-        backdrop-filter: blur(20px);
+    .headertop-btn {
+        height: max-content;
+        padding: 12px;
+        font-size: 12px;
+        color: aliceblue;
+        box-shadow: 0 0 3px #000;
         border: 0 !important;
-        border: 1px solid rgba(255, 255, 255, 0.381) !important;
+        background: #0056a7e9;
+        border: 1px solid #ffffff61;
         cursor: pointer;
         border-radius: 10px;
-        height: max-content;
         align-self: center;
         transition: .3s;
     }
 
-    /* .headercontenttop button:hover{
-        border: 1px solid rgb(255, 255, 255) !important;
-        background: rgba(0, 55, 158, 0.363);
-        transform: scale(1.05);
-    } */
+    .headrtop-boxbars {
+        display: grid;
+        justify-self: start;
+    }
 
-    .header-contentright {
+    .headrtop-boxsearch {
+        display: grid;
         justify-self: end;
     }
 
-    .header-contentleft {
-        justify-self: start;
+    .headertop-logo {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
     }
 
     /* header-down */
@@ -137,7 +89,7 @@
         padding: 5px;
     }
 
-    .header-contentdownbtn{
+    .header-contentdownbtn {
         width: max-content;
         display: grid;
         grid-auto-flow: column;
@@ -145,30 +97,34 @@
         gap: 5px;
     }
 
-    .header-contentdownbtn button{
+    .tabsclickheader {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
         width: 200px;
         height: 30px;
-       background: rgba(0, 106, 255, 0.232);
-        backdrop-filter: blur(20px);
-        border: 0 !important;
-        border: 1px solid rgba(255, 255, 255, 0.381) !important;
+        background: #001a33e9;
+        border: 0;
+        border: 2px solid #5a5a5a;
         cursor: pointer;
         border-radius: 10px;
         align-self: center;
         transition: .3s;
         color: #fff;
-
     }
 
-    /* .header-contentdownbtn button:hover{
-         border: 1px solid rgb(255, 255, 255) !important;
-        background: rgba(0, 55, 158, 0.363);
-        transform: scale(1.05);
-    } */
+    .tabsclickheader.active {
+        border: 0;
+        color: #fff;
+        background: #0056a7e9;
+        box-shadow: 0 0 3px 1px #00a48f;
+    }
 
     /* sliderbars-blur */
 
-    .barsslider-menu {
+    .box-barsslider {
         top: 0;
         left: -450px;
         background-color: #566061;
@@ -180,11 +136,11 @@
         overflow-y: scroll;
     }
 
-    .barsslider-menu.active {
+    .box-barsslider.active {
         left: 0;
     }
 
-    .blurslider-blur {
+    .box-blurslider {
         position: fixed;
         inset: 0;
         background: hsla(0, 0, 0.01);
@@ -196,20 +152,20 @@
         z-index: 100;
     }
 
-    .blurslider-blur.active {
+    .box-blurslider.active {
         opacity: 1;
         pointer-events: all;
     }
 
     /* main */
 
-    main {
+    .maincontent{
         background-color: #202626;
         height: max-content;
         display: grid;
     }
 
-    main * {
+    .maincontent * {
         min-width: 0;
     }
 
@@ -238,7 +194,7 @@
     .swiper {
         width: 100%;
         height: max-content;
-    
+
     }
 
     .slidersboxbtn {
@@ -255,7 +211,6 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
     }
-
 
     .homecontent {
         display: grid;
@@ -285,8 +240,7 @@
         gap: 20px;
         width: 100%;
         height: 100%;
-           background: rgba(37, 111, 141, 0.25);
-        backdrop-filter: blur(18px);
+        background: #001a33e9;
         border-radius: 10px;
         border: 2px solid #5a5a5a;
 
@@ -302,18 +256,18 @@
         scrollbar-width: none;
     }
 
-    .boxgamebtn:hover{
+    .boxgamebtn:hover {
         scrollbar-width: auto;
     }
 
-    .boxgamebtn::-webkit-scrollbar{
+    .boxgamebtn::-webkit-scrollbar {
         height: 5px;
     }
 
     .boxgamebtn button {
         display: grid;
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 100%;
         border: 0;
         justify-self: center;
@@ -322,27 +276,14 @@
     .logogamebtn {
         width: 100%;
         height: 100%;
-        border-radius: 100px;
+        border-radius: 10px;
         box-shadow: 0 0 5px 2px #000000;
     }
-    .boxgamebtn button{
+
+    .boxgamebtn button {
         display: grid;
-        position: relative;
     }
 
-    .gamebtn{
-        background: rgba(0, 0, 0, 0.501);
-        backdrop-filter: blur(20px);
-        position: absolute;
-        display: grid;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 100%;
-        align-items: center;
-        color: #dfdfdf;
-        font-size: 20px;
-    }
 
     /* main-all */
 
@@ -390,17 +331,20 @@
         height: max-content;
         padding: 10px;
         display: grid;
-        background: rgba(37, 111, 141, 0.25);
-        backdrop-filter: blur(18px);
+        background: #001a33e9;
+        border: 1px solid;
         justify-content: center;
         border-radius: 10px;
+        justify-self: center;
     }
 
     .boxgame-all {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(7, 1fr);
         gap: 20px;
-         padding-top: 10px;
+        padding-top: 10px;
+        justify-content: center;
+        justify-self: center;
     }
 
     /* main-download */
@@ -411,7 +355,7 @@
 
     /* main-login */
 
-    #login{
+    #login {
         width: 100%;
         height: 100%;
     }
@@ -422,7 +366,7 @@
         height: 80vh;
     }
 
-    .logincontent form{
+    .logincontent form {
         background-color: #1b90ff;
         justify-self: center;
         align-self: center;
@@ -434,7 +378,7 @@
         border-radius: 10px;
     }
 
-    .inputform{
+    .inputform {
         width: 100%;
         height: max-content;
         padding: 8px;
@@ -444,16 +388,16 @@
         border-bottom: 2px solid #000;
     }
 
-    .inputform::placeholder{
+    .inputform::placeholder {
         text-align: end;
         color: #efefef;
-        }
+    }
 
-    .labelform{
+    .labelform {
         justify-self: end;
     }
 
-    .submitbtn{
+    .submitbtn {
         height: max-content;
         padding: 10px;
         border-radius: 10px;
@@ -463,7 +407,7 @@
         cursor: pointer;
     }
 
-    .brandtext-logn{
+    .brandtext-logn {
         justify-self: center;
         font-size: 30px;
         font-weight: 900;
@@ -476,22 +420,23 @@
         text-align: center;
     }
 
-    .checkboxformlogin{
+    .checkboxformlogin {
         width: 20px;
         height: 20px;
     }
-    .boxcheckbox{
+
+    .boxcheckbox {
         justify-self: end;
     }
 
-    .boxcreateacant-nopassword{
+    .boxcreateacant-nopassword {
         justify-self: center;
         display: grid;
         grid-auto-flow: column;
         gap: 30px;
     }
 
-    .boxcreateacant-nopassword button{
+    .boxcreateacant-nopassword button {
         background-color: transparent;
         border: 0;
         font-size: 15px;
@@ -507,11 +452,10 @@
     }
 
     .boxfootercontent {
-       background: rgba(37, 111, 141, 0.25);
-        backdrop-filter: blur(18px);
+        background: #001a33e9;
         border-radius: 10px;
         height: max-content;
-                border: 2px solid #5a5a5a;
+        border: 2px solid #5a5a5a;
 
     }
 
@@ -611,8 +555,7 @@
     /* main-home--cardgame-download */
 
     .boxdownloadnewgame {
-        background: rgba(37, 111, 141, 0.25);
-        backdrop-filter: blur(18px);
+        background: #001a33e9;
         padding: 10px;
         border-radius: 10px;
         display: grid;
@@ -623,18 +566,19 @@
 
     }
 
-    .card-downloadnewgame::-webkit-scrollbar{
+    .card-downloadnewgame::-webkit-scrollbar {
         height: 5px;
     }
 
 
-    .card-downloadnewgame{
+    .card-downloadnewgame {
         display: grid;
         grid-auto-flow: column;
         grid-template-rows: 1fr;
         overflow-x: scroll;
         scrollbar-width: none;
         padding: 5px;
+        gap: 20px;
     }
 
     .boxdownloadimg {
@@ -644,18 +588,17 @@
         display: grid;
     }
 
-      .boxdownloadbtn {
+    .boxdownloadbtn {
         height: 180px;
-        width: 180px;   
+        width: 180px;
         margin-bottom: 20px;
         display: grid;
     }
 
-    .boxdownloadimggame{
+    .boxdownloadimggame {
         position: absolute;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(8px);
+        background: rgba(0, 0, 0, 0.827);
         font-size: 10px;
         padding: 5px;
         width: 100%;
@@ -665,26 +608,25 @@
         color: #fff;
         display: grid;
         grid-auto-flow: column;
-        
+
     }
 
-    .box-imgdownload{
+    .box-imgdownload {
         position: relative;
         border-radius: 10px;
         box-shadow: 0 0 5px 1px #000000;
-        margin-right: 5px;
     }
 
-    .sizedownload{
+    .sizedownload {
         font-size: 10px;
         font-weight: 200;
     }
 
-    .boxdownloadsize-gamename{
+    .boxdownloadsize-gamename {
         display: grid;
     }
 
-    .boxdownloadicondl{
+    .boxdownloadicondl {
         display: grid;
         align-self: center;
         align-items: center;

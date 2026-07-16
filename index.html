@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloner.ir</title>
+    <title>BLONER</title>
     <link rel="stylesheet" href="./stayle/Stayle.css">
     <link rel="stylesheet" href="./stayle/Responsiv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -15,12 +15,14 @@
             <!-- header -->
             <!-- header-top -->
             <nav class="headercontenttop">
-                <div class="headernavbar header-contentleft">
-                    <button id="clickonslider"><i class="fas fa-bars"></i></button>
+                <div class="headrtop-boxbars">
+                    <button class="headertop-btn" id="clickonslider"><i class="fas fa-bars"></i></button>
                 </div>
-                <img class="logo" src="./static/img/ChatGPT Image Jun 2, 2026, 11_09_51 AM.jpg" alt="">
-                <div class="headernavbar header-contentright">
-                    <button onclick="selectpage('search',this)"><i class="fas fa-search"></i></button>
+                <div class="headrtop-boxlogo">
+                    <img class="headertop-logo" src="./static/img/ChatGPT Image Jun 2, 2026, 11_09_51 AM.jpg" alt="">
+                </div>
+                <div class="headrtop-boxsearch">
+                    <button class="headertop-btn" onclick="selectpage('search',this)"><i class="fas fa-search"></i></button>
                 </div>
             </nav>
             <!-- header-down -->    
@@ -34,11 +36,11 @@
             </nav>
         </header>
         <!-- bars-content-->
-        <div class="barsslider-menu" id="barsslider">
+        <div class="box-barsslider" id="barsslider">
 
         </div>
         <!-- bars-blur-->
-        <div class="blurslider-blur" id="blurslider"></div>
+        <div class="box-blurslider" id="blurslider"></div>
         <!-- main-->
         <main>
             <div class="maincontent">
@@ -49,7 +51,7 @@
                             <div class="swiperslider">
                                 <div class="swiper">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide"><img class="imgswiper" src="./static/img/Cover-Minecraft.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img loading="lazy" class="imgswiper" src="./static/img/Cover-Minecraft.jpg" alt=""></div>
                                         <div class="swiper-slide"><img class="imgswiper" src="./static/img/Cover-Fc.jpg" alt=""></div>
                                         <div class="swiper-slide"><img class="imgswiper" src="./static/img/Cover-Pes.jpg" alt=""></div>
                                         <div class="swiper-slide"><img class="imgswiper" src="./static/img/Cover-Callof.jpg" alt=""></div>
@@ -66,34 +68,26 @@
                             <div class="boxlogogame">
                                 <span class="boxslidertext">: دسته ها</span>
                                 <div class="boxgamebtn">
-                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-Forzahorizon.jpg" alt="peslogo"><span class="gamebtn">رانندگی</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-Minecraft.jpg" alt="peslogo"><span class="gamebtn">ماجرا</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-Pes.jpg" alt="peslogo"><span class="gamebtn">ورزشی</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-EuroTrack.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"><span class="gamebtn">اکشن</span></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt="fifalogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-EuroTrack.jpg" alt="eurotracklogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt=""></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt="fifalogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-EuroTrack.jpg" alt="eurotracklogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt=""></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt="fifalogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-EuroTrack.jpg" alt="eurotracklogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-pes.jpg" alt="peslogo"></button>
-                                    <button><img class="logogamebtn" src="./static/img/Logo game-Fifa.jpg" alt=""></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Forzahorizon.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Minecraft.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Minecraft.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Pes.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-RedDead.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Forzahorizon.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Minecraft.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Minecraft.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Pes.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-RedDead.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-gta.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Forzahorizon.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Minecraft.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Minecraft.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-Pes.jpg" alt="peslogo"></button>
+                                    <button><img class="logogamebtn" src="./static/img/Cover-RedDead.jpg" alt="peslogo"></button>
                                 </div>
                             </div>
                         </div>
