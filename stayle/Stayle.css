@@ -351,6 +351,81 @@
 
     /* main-download */
 
+    .downloadcontent {
+        width: 100%;
+        height: 100dvh;
+        padding: 10px;
+    }
+
+    .boxcarddownloadopens {
+        width: 100%;
+        height: max-content;
+        display: grid;
+        padding: 10px;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .carddownloadopen {
+        width: 100%;
+        height: 50px;
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        background-color: #3f3f3fe9;
+    }
+
+    .boxdownloadcenter {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr max-content;
+        padding: 10px;
+    }
+
+    .inlinedownload {
+        width: 100%;
+        position: relative;
+    }
+
+    .backgrounddownloadsize {
+        width: 100%;
+        height: 5px;
+        background-color: #8e8e8e;
+        border-radius: 10px;
+        position: absolute;
+    }
+
+    .inlinedownloadsize {
+        background-color: #00a48f;
+        width: 45%;
+        height: 5px;
+        position: relative;
+        
+    }
+
+    .carddownloadopen img {
+        width: 100%;
+        height: 50px;
+    }
+
+    .boxdownloadicon {
+        display: grid;
+        align-items: center;
+        padding: 5px;
+        background-color: #202020;
+        width: 40px;
+    }
+
+    .boxdownloadicon button {
+        border: 0;
+        background: transparent;
+        color: #fff;
+    }
+
+    .boxdescriptiondownload{
+        display: grid;
+        grid-template-columns: 1fr max-content;
+    }
+
     /* search */
 
     /* main-save */
@@ -360,15 +435,16 @@
     #login {
         width: 100%;
         height: 100%;
-        background-image: url(../static/img/9ebc7ac9-8d9c-445a-9643-95fd29065819.jfif); 
-        background-size: cover;  
+        background-image: url(../static/img/9ebc7ac9-8d9c-445a-9643-95fd29065819.jfif);
+        background-size: cover;
+        border: 2px solid #5a5a5a;
     }
 
     .logincontent {
         display: grid;
         width: 100%;
         height: 80vh;
-        background: linear-gradient(120deg,#0084ff99 50%,#2c2c2c9d 50%);
+        background: linear-gradient(120deg, #0084ff99 50%, #2c2c2c9d 50%);
     }
 
     .logincontent form {
@@ -384,12 +460,12 @@
         border-radius: 10px;
     }
 
-    .inputform:focus{
+    .inputform:focus {
         transform: scale(1.05);
         background-color: #003566e9;
     }
 
-    .inputform:focus::placeholder{
+    .inputform:focus::placeholder {
         color: #03ffcd;
         font-size: 15px;
     }
