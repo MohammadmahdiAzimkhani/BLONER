@@ -28,16 +28,47 @@
             <!-- header-down -->    
             <nav class="headercontentdown">
                 <div class="header-contentdownbtn">
-                    <button onclick="selectpage('home',this)" class="tabsclickheader active"><i class="fas fa-home"></i><span>خانه</span></button>
-                    <button onclick="selectpage('all',this)" class="tabsclickheader"><i class="fas fa-bars"></i><span>دسته بندی ها</span></button>
-                    <button onclick="selectpage('download',this)" class="tabsclickheader"><i class="fas fa-download"></i><span>دانلود ها</span></button>
-                    <button onclick="selectpage('login',this)" class="tabsclickheader"><i class="fas fa-user"></i><span>ورود</span></button>
+                    <button onclick="selectpage('home',this,0)" class="tabsclickheader active"><i class="fas fa-home"></i><span>خانه</span></button>
+                    <button onclick="selectpage('all',this,1)" class="tabsclickheader"><i class="fas fa-bars"></i><span>دسته بندی ها</span></button>
+                    <button onclick="selectpage('download',this,2)" class="tabsclickheader"><i class="fas fa-download"></i><span>دانلود ها</span></button>
+                    <button onclick="selectpage('login',this,3)" class="tabsclickheader"><i class="fas fa-user"></i><span>ورود</span></button>
                 </div>
             </nav>
         </header>
         <!-- bars-content-->
         <div class="box-barsslider" id="barsslider">
-
+            <div class="barscontent">
+                <div class="boxprofile">
+                    <div class="imgprofile">
+                        <i class="fas fa-user"></i>
+                        <button class="addprofilebtn"><i class="fas fa-add"></i></button>
+                    </div>
+                    <div class="nameprofile">
+                        <p>mohammad</p>
+                        <button class="renameprofilebarsbtn"><i class="fas fa-pencil"></i></button>
+                    </div>
+                </div>
+                <div class="boxbarscontent">
+                    <button onclick="pagebars('home',0,this)" class="boxbarscontentbtn active">خانه</button>
+                    <button onclick="pagebars('all',1,this)" class="boxbarscontentbtn">دسته بندی</button>
+                    <button onclick="pagebars('download',2,this)" class="boxbarscontentbtn">دانلود</button>
+                    <button onclick="pagebars('login',3,this)" class="boxbarscontentbtn">ورود</button>
+                     <button class="boxbarscontentbtn">خانه</button>
+                    <button class="boxbarscontentbtn">دسته بندی</button>
+                    <button class="boxbarscontentbtn">دانلود</button>
+                    <button class="boxbarscontentbtn">ورود</button>
+                     <button class="boxbarscontentbtn">خانه</button>
+                    <button class="boxbarscontentbtn">خانه</button>
+                    <button class="boxbarscontentbtn">دسته بندی</button>
+                    <button class="boxbarscontentbtn">دانلود</button>
+                    <button class="boxbarscontentbtn">ورود</button>
+                     <button class="boxbarscontentbtn">خانه</button>
+                    <button class="boxbarscontentbtn">دسته بندی</button>
+                    <button class="boxbarscontentbtn">دانلود</button>
+                    <button class="boxbarscontentbtn">ورود</button>
+                     <button class="boxbarscontentbtn">خانه</button>
+                </div>
+            </div>
         </div>
         <!-- bars-blur-->
         <div class="box-blurslider" id="blurslider"></div>

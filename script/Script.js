@@ -1,7 +1,7 @@
 // in the name off ALLAH 
 
 // select-page
-function selectpage(id, btn) {
+function selectpage(id, btn, number) {
     const sectionsall = document.querySelectorAll('.sections');
     const tabbtnheader = document.querySelectorAll('.tabsclickheader');
 
@@ -13,6 +13,32 @@ function selectpage(id, btn) {
         tab.classList.remove('active')
     });
     btn.classList.add('active')
+
+    boxbarscontentbtn.forEach(b => {
+        b.classList.remove('active')
+    })
+    boxbarscontentbtn[number].classList.add('active')
+}
+
+// select-page-bars
+
+const tabsclickheader = document.querySelectorAll('.tabsclickheader')
+
+const boxbarscontentbtn = document.querySelectorAll('.boxbarscontentbtn');
+
+function pagebars(id, Number, btn) {
+    const boxbarscontentbtns = document.querySelectorAll('.boxbarscontentbtn');
+    boxbarscontentbtns.forEach(boxbarscontentbtn => {
+        boxbarscontentbtn.classList.remove('active')
+    })
+
+    boxbarscontentbtns[Number].classList.add('active')
+
+    selectpage(id, tabsclickheader[Number], Number);
+
+    barsslider.classList.remove('active');
+    blurslider.classList.remove('active');
+    document.body.style.overflow = "auto"
 }
 
 // select-bars-blur
@@ -46,8 +72,8 @@ const swiper = new Swiper('.swiper', {
     },
 
     autoplay: {
-        delay: 3000, 
-        disableOnInteraction: false, 
+        delay: 3000,
+        disableOnInteraction: false,
     },
 });
 
@@ -55,7 +81,7 @@ const swiper = new Swiper('.swiper', {
 function createGameCard(game) {
     const card = document.createElement('div');
     card.className = 'boxdownloadbtn';
-    
+
     card.innerHTML = `
         <div class="box-imgdownload">
             <img class="boxdownloadimg" src="${game.image}" alt="${game.title}">
@@ -76,7 +102,7 @@ function createGameCard(game) {
     //     btn.addEventListener('click', function() {
     //         const action = this.dataset.action;
     //         const id = this.dataset.id;
-            
+
     //         if (action === 'detail') {
     //             showGameDetail(id);
     //         } else if (action === 'download') {
@@ -110,7 +136,7 @@ const games = [
         ram: "16G",
         ssd: "100G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -121,7 +147,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-      {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -132,7 +158,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-      {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -143,7 +169,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -154,7 +180,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -165,7 +191,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -176,7 +202,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -187,7 +213,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -198,7 +224,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -209,7 +235,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -220,7 +246,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -231,7 +257,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -242,7 +268,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -253,7 +279,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -264,7 +290,7 @@ const games = [
         ram: "12G",
         ssd: "200G"
     },
-     {
+    {
         id: 4,
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
@@ -308,8 +334,14 @@ games.forEach(game => {
 
 // update 
 
-const gameboxupdate=document.getElementById("cardgameboxupdate");
+const gameboxupdate = document.getElementById("cardgameboxupdate");
 
-games.forEach(game=>{
+games.forEach(game => {
     gameboxupdate.appendChild(createGameCard(game))
 })
+
+
+
+
+
+
