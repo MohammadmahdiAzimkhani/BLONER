@@ -62,6 +62,11 @@
         width: 110px !important;
     }
 
+    .allcardgames {
+        height: 140px !important;
+        width: 110px !important;
+    }
+
     .boxdownloadimg {
         height: 100%;
     }
@@ -126,6 +131,11 @@
         height: 180px;
         width: 180px;
     }
+
+    .allcardgames{
+         height: 180px;
+        width: 180px;
+    }
     
     /* main-all */
 
@@ -147,6 +157,11 @@
         height: 190px;
         width: 140px;
     }
+    .allcardgames {
+        height: 190px;
+        width: 140px;
+    }
+
     
     /* main-all */
 
