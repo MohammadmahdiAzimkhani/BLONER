@@ -578,3 +578,24 @@ function selectallcard(classall,btn){
     })
     btn.classList.add('active')
 }
+
+
+
+
+const cardgamesearchs=document.querySelectorAll(".allcardgames")
+
+const searchinputall=document.getElementById("searchallgame");
+
+searchinputall.addEventListener("input",()=>{
+    const value=searchinputall.value.trim().toLowerCase()
+
+    cardgamesearchs.forEach(allcardgames=>{
+        const text=allcardgames.textContent.toLowerCase()
+
+        if(text.includes(value)){
+            allcardgames.classList.add('active')
+        }else{
+            allcardgames.classList.remove('active')
+        }
+    })
+})
