@@ -102,7 +102,7 @@ const swiper = new Swiper('.swiper', {
 function createGameCard(game) {
     const card = document.createElement('div');
     card.className = 'boxdownloadbtn';
-    card.id=game.id
+    card.id = game.id
 
     card.innerHTML = `
         <div class="box-imgdownload">
@@ -347,7 +347,7 @@ games.forEach(game => {
 function createGameCardall(gameall) {
     const card = document.createElement('div');
     card.className = `allcardgames ${gameall.class} active`;
-    card.id=gameall.id
+    card.id = gameall.id
 
     card.innerHTML = `
         <div class="box-imgdownload">
@@ -372,182 +372,182 @@ const gamesall = [
     {
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
-        class:"fc all"
+        class: "fc all"
     },
     {
         gamename: "PES 2026",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
     {
         gamename: "GTA5",
         image: "./static/img/Cover-gta.jpg",
-        class:"gta all"
+        class: "gta all"
     },
-     {
+    {
         gamename: "GTAv",
         image: "./static/img/Cover-gta.jpg",
-        class:"gta all"
+        class: "gta all"
     },
-     {
+    {
         gamename: "GTA",
         image: "./static/img/Cover-gta.jpg",
-        class:"gta all"
+        class: "gta all"
     },
     {
         gamename: "PES 2025",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
-     {
+    {
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
-        class:"fc all"
+        class: "fc all"
     },
     {
         gamename: "PES 2026",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
     {
         gamename: "NeedFor",
         image: "./static/img/Cover-NeedFor-Speed.jpg",
-        class:"needfor all"
+        class: "needfor all"
     },
     {
         gamename: "PES 2025",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
-     {
+    {
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
-        class:"fc all"
+        class: "fc all"
     },
     {
         gamename: "PES 2026",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
-     {
+    {
         gamename: "GTA san",
         image: "./static/img/Cover-gta.jpg",
-        class:"gta all"
+        class: "gta all"
     },
-     {
+    {
         gamename: "GTA5",
         image: "./static/img/Cover-gta.jpg",
-        class:"gta all"
+        class: "gta all"
     },
     {
         gamename: "Need For",
         image: "./static/img/Cover-NeedFor-Speed.jpg",
-        class:"needfor all"
+        class: "needfor all"
     },
     {
         gamename: "PES 2025",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
-     {
+    {
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
-        class:"fc all"
+        class: "fc all"
     },
     {
         gamename: "PES 2026",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
     {
         gamename: "Need For",
         image: "./static/img/Cover-NeedFor-Speed.jpg",
-        class:"needfor all"
+        class: "needfor all"
     },
     {
         gamename: "PES 2025",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
-     {
+    {
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
-        class:"fc all"
+        class: "fc all"
     },
     {
         gamename: "PES 2026",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
     {
         gamename: "Need For",
         image: "./static/img/Cover-NeedFor-Speed.jpg",
-        class:"needfor all"
+        class: "needfor all"
     },
     {
         gamename: "PES 2025",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
-     {
+    {
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
-        class:"fc all"
+        class: "fc all"
     },
     {
         gamename: "PES 2026",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
     {
         gamename: "Need For",
         image: "./static/img/Cover-NeedFor-Speed.jpg",
-        class:"needfor all"
+        class: "needfor all"
     },
     {
         gamename: "PES 2025",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
-     {
+    {
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
-        class:"fc all"
+        class: "fc all"
     },
     {
         gamename: "PES 2026",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
     {
         gamename: "Need For",
         image: "./static/img/Cover-NeedFor-Speed.jpg",
-        class:"reddead all"
+        class: "reddead all"
     },
     {
         gamename: "PES 2025",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
-     {
+    {
         gamename: "FC 26",
         image: "./static/img/Cover-Fc.jpg",
-        class:"fc all"
+        class: "fc all"
     },
     {
         gamename: "PES 2026",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
     {
         gamename: "Need For",
         image: "./static/img/Cover-NeedFor-Speed.jpg",
-        class:"needfor all"
+        class: "needfor all"
     },
     {
         gamename: "PES 2025",
         image: "./static/img/Cover-Pes.jpg",
-        class:"pes all"
+        class: "pes all"
     },
 
     // بازی‌های بیشتر اضافه کن...
@@ -563,17 +563,17 @@ gamesall.forEach(gameall => {
 
 
 
-function selectallcard(classall,btn){
-    const allcardgamesall=document.querySelectorAll(".allcardgames");
-    allcardgamesall.forEach(allcardgames=>{
+function selectallcard(classall, btn) {
+    const allcardgamesall = document.querySelectorAll(".allcardgames");
+    allcardgamesall.forEach(allcardgames => {
         allcardgames.classList.remove("active")
     })
-    document.querySelectorAll(classall).forEach(f=>{
+    document.querySelectorAll(classall).forEach(f => {
         f.classList.add('active')
     })
 
-    const boxallspans=document.querySelectorAll('.boxallspan')
-    boxallspans.forEach(boxallspan=>{
+    const boxallspans = document.querySelectorAll('.boxallspan')
+    boxallspans.forEach(boxallspan => {
         boxallspan.classList.remove("active")
     })
     btn.classList.add('active')
@@ -582,20 +582,100 @@ function selectallcard(classall,btn){
 
 
 
-const cardgamesearchs=document.querySelectorAll(".allcardgames")
+const cardgamesearchs = document.querySelectorAll(".allcardgames")
 
-const searchinputall=document.getElementById("searchallgame");
+const searchinputall = document.getElementById("searchallgame");
 
-searchinputall.addEventListener("input",()=>{
-    const value=searchinputall.value.trim().toLowerCase()
+searchinputall.addEventListener("input", () => {
+    const value = searchinputall.value.trim().toLowerCase()
 
-    cardgamesearchs.forEach(allcardgames=>{
-        const text=allcardgames.textContent.toLowerCase()
+    cardgamesearchs.forEach(allcardgames => {
+        const text = allcardgames.textContent.toLowerCase()
 
-        if(text.includes(value)){
+        if (text.includes(value)) {
             allcardgames.classList.add('active')
-        }else{
+        } else {
             allcardgames.classList.remove('active')
         }
     })
+})
+
+
+
+const carddownloadopens = document.querySelectorAll('.carddownloadopen')
+
+const searchdownloadgame = document.getElementById('searchdownloadgame');
+
+searchdownloadgame.addEventListener("input", () => {
+    const value = searchdownloadgame.value.trim().toLowerCase()
+    carddownloadopens.forEach(carddownloadopen => {
+        const text = carddownloadopen.textContent.toLowerCase()
+        if (text.includes(value)) {
+            carddownloadopen.style.display = "grid"
+        } else {
+            carddownloadopen.style.display = "none"
+        }
+    })
+})
+
+
+
+const opensearchhomebtn=document.getElementById('opensearchhomebtn');
+
+const opensearchhomeinput=document.getElementById('opensearchhomeinput');
+
+opensearchhomebtn.addEventListener('click',()=>{
+    opensearchhomebtn.classList.toggle('active');
+    opensearchhomeinput.classList.toggle('active');
+})
+
+
+const createaccantbtnlogin=document.getElementById('createaccantbtnlogin')
+
+const loginformcontent=document.getElementById('loginformcontent');
+
+const signinformcontent=document.getElementById('signinformcontent');
+
+const backsignin=document.querySelectorAll('.backsignin')
+
+const forgotpasswordformcontent=document.getElementById('forgotpasswordformcontent');
+
+const fotgotpasswordbtn=document.getElementById('fotgotpasswordbtn')
+
+createaccantbtnlogin.addEventListener('click',()=>{
+    loginformcontent.classList.remove('active')
+    signinformcontent.classList.add('active')
+})
+
+
+
+
+
+fotgotpasswordbtn.addEventListener('click',()=>{
+    forgotpasswordformcontent.classList.add('active')
+     loginformcontent.classList.remove('active')
+    signinformcontent.classList.remove('active')
+})
+
+
+backsignin.forEach(back=>{
+    back.addEventListener('click',()=>{
+       
+    loginformcontent.classList.add('active')
+    signinformcontent.classList.remove('active')
+    forgotpasswordformcontent.classList.remove('active')
+
+    })
+})
+
+
+
+const testinput=document.getElementById('testinput');
+
+const testbtn=document.getElementById('testbtn')
+
+testbtn.addEventListener('click',()=>{
+    let value=testinput.value
+    console.log(value);
+    
 })

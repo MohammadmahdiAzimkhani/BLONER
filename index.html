@@ -22,7 +22,7 @@
                     <img class="headertop-logo" src="./static/img/ChatGPT Image Jun 2, 2026, 11_09_51 AM.jpg" alt="">
                 </div>
                 <div class="headrtop-boxsearch">
-                    <button class="headertop-btn"><i class="fas fa-search"></i></button>
+                    <button id="opensearchhomebtn" class="headertop-btn"><i class="fas fa-search"></i></button>
                 </div>
             </nav>
             <!-- header-down -->    
@@ -78,6 +78,9 @@
                 <!-- main-home -->
                 <section class="sections active" id="home">
                     <div class="homecontent">
+                        <div class="searchhome">
+                            <input id="opensearchhomeinput" class="Search-home" type="text" placeholder="Serach In The Bloner...">
+                        </div>
                         <div class="homecontent-slider">
                             <div class="swiperslider">
                                 <div class="swiper">
@@ -164,14 +167,14 @@
                 <section class="sections" id="download">
                     <div class="downloadcontent">
                         <div class="boxsearchdownload">
-                            <input class="Search-allcardgame" type="text" placeholder="Serach In The CardGame...">
+                            <input id="searchdownloadgame" class="Search-allcardgame" type="text" placeholder="Serach In The CardGame...">
                         </div>
                         <div class="boxcarddownloadopens">
                             <div class="carddownloadopen">
                                 <img src="./static/img/Cover-RedDead.jpg" alt="">
                                 <div class="boxdownloadcenter">
                                     <div class="boxdescriptiondownload">
-                                        <span>Reddead</span>
+                                        <span class="boxnumbernamedownload">Reddead</span>
                                         <div class="boxnumbersizedownload">
                                             45%
                                         </div>
@@ -189,7 +192,7 @@
                                 <img src="./static/img/Cover-gta.jpg" alt="">
                                 <div class="boxdownloadcenter">
                                     <div class="boxdescriptiondownload">
-                                        <span>GTA</span>
+                                        <span class="boxnumbernamedownload">GTA</span>
                                         <div class="boxnumbersizedownload">
                                             45%
                                         </div>
@@ -207,7 +210,7 @@
                                 <img src="./static/img/Cover-Minecraft.jpg" alt="">
                                <div class="boxdownloadcenter">
                                     <div class="boxdescriptiondownload">
-                                       <span>Maincontent</span>
+                                       <span class="boxnumbernamedownload">Maincontent</span>
                                         <div class="boxnumbersizedownload">
                                             45%
                                         </div>
@@ -230,20 +233,35 @@
                 </section>
                 <!-- main-login -->
                 <section class="sections" id="login">
-                    <div class="logincontent">
+                    <div id="loginformcontent" class="logincontent sectionloginsignin active">
                         <form action="">
                             <span class="brandtext-logn">BLONER</span>
                             <input class="inputform" type="text" placeholder="...ایمیل">
                             <input class="inputform" type="password" placeholder="...پسورد">
-                            <div class="boxcheckbox">
-                                <span>من روبات نیستم</span>
-                                <input class="checkboxformlogin" type="checkbox" name="" id="">
-                            </div>
                             <button class="submitbtn" type="submit">ورود</button>
                             <div class="boxcreateacant-nopassword">
-                                <button>فراموشی رمز عبور</button>
-                                <button>ساخت اکانت</button>
+                                <button id="fotgotpasswordbtn" type="button">فراموشی رمز عبور</button>
+                                <button id="createaccantbtnlogin" type="button">ساخت اکانت</button>
                             </div>
+                        </form>
+                    </div>
+                    <div id="signinformcontent" class="logincontent sectionloginsignin">
+                        <button class="backsignin" type="button"><i class="fas fa-arrow-left"></i></button>
+                         <form action="">
+                            <span class="brandtext-logn">BLONER</span>
+                            <input id="testinput" class="inputform" type="text" placeholder="...نام">
+                            <input class="inputform" type="text" placeholder="...ایمیل">
+                            <input class="inputform" type="text" placeholder="...پسورد">
+                            <input class="inputform" type="password" placeholder="...پسورد">
+                            <button id="testbtn" class="submitbtn" type="button">ورود</button>
+                        </form>
+                    </div>
+                    <div id="forgotpasswordformcontent" class="logincontent sectionloginsignin">
+                        <button class="backsignin" type="button"><i class="fas fa-arrow-left"></i></button>
+                         <form action="">
+                            <span class="brandtext-logn">BLONER</span>
+                            <input class="inputform" type="text" placeholder="...ایمیل">
+                            <button class="submitbtn" type="submit">ورود</button>
                         </form>
                     </div>
                 </section>
