@@ -486,11 +486,16 @@
 
     .carddownloadopen {
         width: 100%;
-        height: 60px;
+        height: 70px;
         display: grid;
         grid-template-columns: max-content 1fr max-content;
-        background-color: #3f3f3fe9;
+        background-color: #4c4c4ce9;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 1px #0080ff87;
+
     }
+
+   
 
     .boxdownloadcenter {
         height: 100%;
@@ -513,8 +518,8 @@
     }
 
     .inlinedownloadsize {
-        background-color: #00ffdd;
-        width: 45%;
+        background-color: #0463fb;
+        width: 45%; 
         border-radius: 10px;
         height: 4px;
         position: relative;
@@ -523,26 +528,92 @@
 
     .carddownloadopen img {
         width: 90px;
-        height: 60px;
+        height: 70px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
 
     .boxdownloadicon {
         display: grid;
         align-items: center;
         padding: 5px;
-        background-color: #202020;
+        background-color: #313131;
         width: 40px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
     .boxdownloadicon button {
         border: 0;
         background: transparent;
-        color: #fff;
+        color: #0494fb;
+        
     }
 
     .boxdescriptiondownload{
         display: grid;
         grid-template-columns: 1fr max-content;
+    }
+
+    .carddownloadopen{
+        user-select: none;
+        cursor: pointer ;
+    }
+
+    #sideBox{
+        display: none;
+        position: fixed;
+        width: max-content;
+        height: max-content;
+        color: #000000;
+        box-shadow: 0 0 5px 1px #0080ff5b;
+        grid-auto-flow: row;
+        transition: 0.7s all;
+        z-index: 1000;
+    }
+
+    #sideBox button{
+        background: #404040;
+        padding: 5px;
+        color: #c2c2c2;
+        font-size: 12px;
+        transition: 0.2s all;
+        border: 0;
+        border:1px solid #0463fb;
+    }
+
+    #sideBox button:hover{
+        background-color: #565656;
+        color: #eeeded;
+        transform: scale(1.01);
+    }
+
+     .sideBoxs{
+        display: none;
+        position: fixed;
+        width: max-content;
+        height: max-content;
+        color: #000000;
+        box-shadow: 0 0 5px 1px #0080ff5b;
+        grid-template-columns: 1fr;
+        transition: 0.7s all;
+        z-index: 1000;
+    }
+
+      .sideBoxs button{
+        background: #404040;
+        padding: 5px;
+        color: #c2c2c2;
+        font-size: 12px;
+        transition: 0.2s all;
+        border: 0;
+        border:1px solid #0463fb;
+    }
+
+    .sideBoxs button:hover{
+        background-color: #565656;
+        color: #eeeded;
+        transform: scale(1.01);
     }
 
     /* .carddownloadopen{

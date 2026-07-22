@@ -721,3 +721,104 @@ passwordinput.addEventListener("input", checkInputs);
 
 // هنگام لود صفحه هم بررسی کن
 checkInputs();
+
+
+emailinput.addEventListener('input', () => {
+    if (emailinput.value.includes("@")) {
+        emailinput.style.border = "2px solid #00ff00"
+    }
+    else {
+        emailinput.style.border = "2px solid red"
+    }
+})
+
+passwordinput.addEventListener('input', () => {
+    if (passwordinput.value.includes('@') || passwordinput.value.includes('$') || passwordinput.value === "") {
+        passwordinput.style.border = "2px solid red"
+    } else {
+        passwordinput.style.border = "2px solid #00ff00"
+    }
+})
+
+
+
+
+
+const dragBox = document.getElementById("dragBox");
+const sideBox = document.getElementById("sideBox");
+
+// let startX = 0;
+
+// dragBox.addEventListener("mousedown", (e) => {
+//     startX = e.clientX;
+
+//     function move(e) {
+//         let dx = e.clientX - startX
+//         dragBox.style.transform = `translate(${dx}px)`
+//         // اگر بیشتر از ۵۰ پیکسل به چپ کشیده شد
+//         if (dx < -200) {
+//             sideBox.style.visibility = "visible";
+//             dragBox.style.display = "none"
+//         }
+//     }
+
+//     function up() {
+//         document.removeEventListener("mousemove", move);
+//         document.removeEventListener("mouseup", up);
+//     }
+
+//     document.addEventListener("mousemove", move);
+//     document.addEventListener("mouseup", up);
+// });
+
+
+// const carddownloadopen = document.querySelectorAll('.carddownloadopen')
+
+// const sideBoxs = document.querySelectorAll('.sideboxs')
+
+
+const items = document.querySelectorAll(".carddownloadopen");
+const menus = document.querySelectorAll(".sideBoxs");
+
+items.forEach((item, index) => {
+
+    let timer;
+
+    item.addEventListener("mousedown", (e) => {
+
+        timer = setTimeout(() => {
+
+            menus[index].style.left = e.clientX + "px";
+            menus[index].style.top = e.clientY + "px";
+            menus[index].style.display = "grid";
+
+        }, 1000);
+
+    });
+
+    item.addEventListener("mouseup", () => {
+        clearTimeout(timer);
+    });
+
+    item.addEventListener("mouseleave", () => {
+        clearTimeout(timer);
+    });
+
+});
+
+
+document.addEventListener("mousedown", (e) => {
+
+    menus.forEach((menu, index) => {
+
+        if (
+            !items[index].contains(e.target) &&
+            !menu.contains(e.target)
+        ) {
+            menu.style.display = "none";
+        }
+
+    });
+
+});
+
