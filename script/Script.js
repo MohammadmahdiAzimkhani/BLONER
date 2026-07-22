@@ -796,6 +796,7 @@ items.forEach((item, index) => {
 
     });
 
+
     item.addEventListener("mouseup", () => {
         clearTimeout(timer);
     });
@@ -804,7 +805,26 @@ items.forEach((item, index) => {
         clearTimeout(timer);
     });
 
+    item.addEventListener("touchstart", (e) => {
+
+    let touch = e.touches[0];
+
+    timer = setTimeout(() => {
+
+        menus[index].style.left = touch.clientX + "px";
+        menus[index].style.top = touch.clientY + "px";
+
+        menus[index].style.display = "grid";
+
+    }, 1500);
+
 });
+
+
+
+
+});
+
 
 
 document.addEventListener("mousedown", (e) => {
@@ -822,3 +842,6 @@ document.addEventListener("mousedown", (e) => {
 
 });
 
+// menus.addEventListener("touchend", () => {
+//     clearTimeout(timer);
+// });
