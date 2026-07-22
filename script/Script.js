@@ -791,7 +791,9 @@ items.forEach((item, index) => {
             menus[index].style.left = e.clientX + "px";
             menus[index].style.top = e.clientY + "px";
             menus[index].style.display = "grid";
-
+            items[index].style.boxShadow = '0 0 8px 3px green'
+            items[index].style.transform = 'scale(1.02)'
+            items[index].style.transition = '0.3s all'
         }, 1000);
 
     });
@@ -807,18 +809,20 @@ items.forEach((item, index) => {
 
     item.addEventListener("touchstart", (e) => {
 
-    let touch = e.touches[0];
+        let touch = e.touches[0];
 
-    timer = setTimeout(() => {
+        timer = setTimeout(() => {
 
-        menus[index].style.left = touch.clientX + "px";
-        menus[index].style.top = touch.clientY + "px";
+            menus[index].style.left = touch.clientX + "px";
+            menus[index].style.top = touch.clientY + "px";
+            items[index].style.boxShadow = '0 0 8px 3px green'
+            items[index].style.transform = 'scale(1.02)'
+            items[index].style.transition = '0.3s all'
+            menus[index].style.display = "grid";
 
-        menus[index].style.display = "grid";
+        }, 1000);
 
-    }, 1500);
-
-});
+    });
 
 
 
@@ -836,6 +840,8 @@ document.addEventListener("mousedown", (e) => {
             !menu.contains(e.target)
         ) {
             menu.style.display = "none";
+            items[index].style.boxShadow = '0 0 5px 1px #0080ff5b'
+            items[index].style.transform = 'scale(1)'
         }
 
     });
