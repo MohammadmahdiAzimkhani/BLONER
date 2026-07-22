@@ -16,15 +16,15 @@
     background-color: gray;
     cursor: not-allowed;
     opacity: 0.6;
-}
+    }
 
-button{
-        user-select: none;
-        cursor: pointer ;
-        -webkit-user-select:none;
-        -webkit-touch-callout:none;
-        -webkit-tap-highlight-color: transparent;
-}
+    button{
+            user-select: none;
+            cursor: pointer ;
+            -webkit-user-select:none;
+            -webkit-touch-callout:none;
+            -webkit-tap-highlight-color: transparent;
+    }
 
     ::-webkit-scrollbar {
         width: 6px;
@@ -499,8 +499,7 @@ button{
         grid-template-columns: max-content 1fr max-content;
         background-color: #4c4c4ce9;
         border-radius: 10px;
-        box-shadow: 0 0 5px 1px #0080ff87;
-
+        box-shadow: 0 0 5px 1px #000;
     }
 
    
@@ -571,33 +570,6 @@ button{
         -webkit-tap-highlight-color: transparent;
     }
 
-    #sideBox{
-        display: none;
-        position: fixed;
-        width: max-content;
-        height: max-content;
-        color: #000000;
-        box-shadow: 0 0 5px 1px #0080ff5b;
-        grid-auto-flow: row;
-        transition: 0.7s all;
-        z-index: 1000;
-    }
-
-    #sideBox button{
-        background: #404040;
-        padding: 5px;
-        color: #c2c2c2;
-        font-size: 12px;
-        transition: 0.2s all;
-        border: 0;
-        border:1px solid #0463fb;
-    }
-
-    #sideBox button:hover{
-        background-color: #565656;
-        color: #eeeded;
-        transform: scale(1.01);
-    }
 
      .sideBoxs{
         display: none;
@@ -605,20 +577,19 @@ button{
         width: max-content;
         height: max-content;
         color: #000000;
-        box-shadow: 0 0 5px 1px #0080ff5b;
-        grid-template-columns: 1fr;
+        box-shadow: 0 0 5px 1px #0000005b;
+        grid-template-columns: 1fr 1fr 1fr;
         transition: 0.7s all;
         z-index: 10;
     }
 
       .sideBoxs button{
-        background: #404040;
+        background: #404040c3;
         padding: 5px;
         color: #c2c2c2;
         font-size: 12px;
         transition: 0.2s all;
         border: 0;
-        border:1px solid #0463fb;
     }
 
     .sideBoxs button:hover{
