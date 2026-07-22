@@ -18,6 +18,8 @@ function selectpage(id, btn, number) {
         b.classList.remove('active')
     })
     boxbarscontentbtn[number].classList.add('active')
+
+   document.querySelector('*').scrollTop = 0;
 }
 
 // select-page-bars
@@ -108,14 +110,26 @@ function createGameCard(game) {
         <div class="box-imgdownload">
             <img class="boxdownloadimg" src="${game.image}" alt="${game.title}">
             <div class="boxdownloadimggame">
-                <div class="boxdownloadsize-gamename">
+                <div class='boxtopcard'>
+                       <div class="boxdownloadsize-gamename">
                     <span>${game.gamename}</span>
                     <span class="sizedownload">10G</span>
                 </div>
                 <div class="boxdownloadicondl">
                      <span><i class="fas fa-download"></i></span>   
                 </div>
-            </div>
+                </div>
+                 <div id='boxs'>
+                 <div class="sideBoxst">
+                    <button><span><i class="fas fa-play"></i></span></button>
+                    <button><span><i class="fas fa-pause"></i></span></button>
+                    <button><span><i class="fas fa-xmark"></i></span></button>
+                    <button><span><i class="fas fa-circle-info"></i></span></button>
+                    <button><span><i class="fas fa-trash-can"></i></span></button>
+                    <button><span><i class="fas fa-bookmark"></i></span></button>
+                 </div>
+              </div>
+            </.div>
         </div>
     `;
 
@@ -851,3 +865,22 @@ document.addEventListener("mousedown", (e) => {
 // menus.addEventListener("touchend", () => {
 //     clearTimeout(timer);
 // });
+
+
+
+
+
+const btncard = document.querySelectorAll(".boxdownloadbtn");
+
+const boxdownloadimggame = document.querySelectorAll(".boxdownloadimggame");
+
+const sideBoxst = document.querySelectorAll('.sideBoxst')
+
+const boxs = document.getElementById('boxs')
+
+btncard.forEach((item, index) => {
+    item.addEventListener('click', (e) => {
+        boxdownloadimggame[index].classList.toggle('active');
+    })
+})
+
